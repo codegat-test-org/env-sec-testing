@@ -1,0 +1,13 @@
+name: Environment testing
+on:
+  pull_request:
+    branches:
+      - release-*
+      - dev-*
+jobs:
+  env-job:
+    name: A job that uses environments
+    runs-on: ubuntu-latest
+    environment: Test
+    steps:
+      - run: echo "Does some boring stuff..."
